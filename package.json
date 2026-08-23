@@ -2,7 +2,7 @@
   "name": "document-vault-graphql",
   "version": "1.0.0",
   "description": "A backend GraphQL service for organizing documents into collections",
-  "main": "src/server.ts",
+  "main": "api/graphql.ts",
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/server.ts",
@@ -27,6 +27,7 @@
     "eslint": "^9.21.0",
     "prisma": "^6.4.1",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1"
+    "typescript-eslint": "^8.24.1",
+    "@vercel/node": "^5.1.10"
   }
 }
