@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Collection {
+  id        String     @id @default(cuid())
+  name      String
+  slug      String     @unique
+  createdAt DateTime   @default(now())
+  documents Document[]
+}
+
+model Document {
+  id           String     @id @default(cuid())
+  title        String
+  content      String
+  tags         String[]
+  isArchived   Boolean    @default(false)
+  createdAt    DateTime   @default(now())
+  collectionId String
+  collection   Collection @relation(fields: [collectionId], references: [id])
+
+  @@index([collectionId])
+}
