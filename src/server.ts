@@ -12,7 +12,6 @@ export const schema = createSchema<GraphQLContext>({
 export const yoga = createYoga<GraphQLContext>({
   schema,
   context: () => createContext(),
-  graphqlEndpoint: "/graphql",
 });
 
 export const server = createServer(yoga);
