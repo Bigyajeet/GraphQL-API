@@ -13,6 +13,7 @@
     "test": "bun test tests/unit",
     "test:integration": "bun test tests/integration",
     "sanity": "bun run lint && bun run typecheck && bun run test && bun run test:integration",
+    "build": "prisma generate",
     "vercel-build": "prisma generate"
   },
   "dependencies": {
