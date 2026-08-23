@@ -1,5 +1,5 @@
 import { yoga } from "../src/server";
 
-export default async function handler(request: Request) {
-  return yoga.fetch(request);
+export default async function handler(req: any, res: any) {
+  return yoga(req, res);
 }

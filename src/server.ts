@@ -23,3 +23,7 @@ if (process.env.NODE_ENV !== "test") {
     console.log(`Document Vault GraphQL server running on http://localhost:${port}/graphql`);
   });
 }
+
+export default async function handler(req: any, res: any) {
+  return yoga(req, res);
+}
